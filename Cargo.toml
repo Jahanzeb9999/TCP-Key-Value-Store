@@ -1,0 +1,15 @@
+[package]
+name = "lowlevel"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.28", features = ["full"] }  # Tokio still has a full feature, so keep this
+serde = { version = "1.0", features = ["derive"] }  # Remove "full", keep only valid features like "derive"
+serde_json = "1.0"
+thiserror = "1.0"
+async-trait = "0.1.68"  # or the latest version
+rand = "0.8"
+log = "0.4"
+env_logger = "0.10"
+clap = { version = "4.3", features = ["derive"] }
